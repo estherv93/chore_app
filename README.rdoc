@@ -2,3 +2,22 @@ The official home for the Chore App!
 
 2016-07-06
 The project has officially begun.
+
+About the Project
+The idea was birthed in February 2016, when Elijah came down to visit us. He was interested in completing a programming project with us, but between trips to the zoo and the Everglades, there wasn't nearly enough time. 
+
+This time, however, we were prepared. As soon as he arrived, we selected a few days to work on a project together. 
+
+During a short period of brainstorming, a few ideas were tossed up: 
+	• Ecommerce site to sell cookies
+	• Social networking site
+	• Chore app
+	• Knowledge Base/Wikipedia type site
+
+Finally, a single project was selected: a chore app, which would contain user profiles, lists of chores, a reward system, etc. 
+
+That day, we divided up the work and began the research and development process. Our research was focused on four main sections:
+	• Chore Research - What type of chores are out there?
+	• Existing Apps - Are there any chore apps already? What are they like? What are their strengths? Weaknesses?
+	• Similar Apps - What about similar apps, like fitness apps, etc? What can we learn from their gamification systems?
+	• Platform Research - What are we going to build this application on? Is it going to be web based? What platform is the best for this kind of application?
