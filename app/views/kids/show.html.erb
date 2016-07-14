@@ -1,0 +1,9 @@
+<h1><%= @kid.kidname %></h1>
+
+<% @chore_lists.each do |chore_list| %>
+<div class="row">
+  <div class="col-lg-6 well col-lg-offset-3">
+      <p><%= link_to chore_list.title, chore_list_path(chore_list) %></p>
+  </div>
+</div>
+<% end %>

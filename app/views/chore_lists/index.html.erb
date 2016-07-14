@@ -19,9 +19,10 @@
         <td><%= link_to 'Destroy', chore_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Chore list', new_chore_list_path %>
+<%= link_to 'New Chore list', new_chore_list_path %> | | <%= link_to "See Your Kids", kids_path, class: "btn btn-warning btn-small" %>

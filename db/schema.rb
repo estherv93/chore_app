@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713192749) do
+ActiveRecord::Schema.define(version: 20160713200238) do
 
   create_table "chore_items", force: :cascade do |t|
     t.string   "content"
     t.integer  "chore_list_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "chore_items", ["chore_list_id"], name: "index_chore_items_on_chore_list_id"
 
   create_table "chore_lists", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "kid_id"
   end
 
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160713192749) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

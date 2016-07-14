@@ -26,6 +26,8 @@ class ChoreListsController < ApplicationController
   def create
     @chore_list = ChoreList.new(chore_list_params)
 
+      @chore_list.kid = Kid.find(2)
+      
     respond_to do |format|
       if @chore_list.save
         format.html { redirect_to @chore_list, notice: 'Chore list was successfully created.' }

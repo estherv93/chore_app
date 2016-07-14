@@ -1,0 +1,11 @@
+<% @kids.each do |kid| %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 center">
+      <p>
+        <h2>Kid name: <%= kid.kidname %></h2>
+        <h3><%= link_to "See Chores", kid_path(kid) %></h3>
+      </p>
+      
+    </div>
+</div>
+<% end %>

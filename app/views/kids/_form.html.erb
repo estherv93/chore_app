@@ -1,0 +1,19 @@
+<%= render 'shared/errors', obj: @kid %>
+
+<div>
+  <div>
+      <%= form_for @kid do |f| %>
+      <%= f.label :kidname %>
+      <%= f.text_field :kidname %>
+    
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    
+    <%= f.label :password %>
+    <%= f.password_field :password%>
+    
+      <%= f.submit(@kid.new_record? ? 'Register' : 'Edit Profile') %>
+    
+    <% end %>
+  </div>
+</div>
