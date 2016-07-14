@@ -1,11 +1,15 @@
 <% @kids.each do |kid| %>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 center">
       <p>
-        <h2>Kid name: <%= kid.kidname %></h2>
-        <h3><%= link_to "See Chores", kid_path(kid) %></h3>
+          <strong>Kid name</strong>: <%= kid.kidname %> <br>
+        <%= link_to "See Chores", kid_path(kid) %>
+         | <%= link_to "Delete",  @kid, method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this kid?" } %>
       </p>
-      
-    </div>
-</div>
 <% end %>
+<hr>
+
+<h2>Add a Kid</h2>
+
+<br>
+<br>
+
+<%= render 'form' %>

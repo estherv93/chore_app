@@ -2,16 +2,17 @@ class KidsController < ApplicationController
     
     def index
         @kids = Kid.all
+        @kid = Kid.new
     end
     
     def new
-        @kid = Kid.new 
+        @kid = Kid.new
     end
     
     def create
         @kid = Kid.new(kid_params)
         if @kid.save
-            redirect_to chore_lists_path
+            redirect_to kids_path
         else
             render 'new'
         end
@@ -32,7 +33,13 @@ class KidsController < ApplicationController
     
     def show
         @kid = Kid.find(params[:id])
-        @chore_lists = @kid.chore_lists
+        @chore_items = @kid.chore_items
+    end
+    
+    def destroy
+        Kid.find(params[:id]).destroy
+        flash[:success] = "Kid Deleted"
+        redirect_to kids_path
     end
     
     private
