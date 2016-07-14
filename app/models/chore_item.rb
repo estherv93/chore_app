@@ -1,3 +1,3 @@
 class ChoreItem < ActiveRecord::Base
-  belongs_to :chore_list
+    belongs_to :kid
 end

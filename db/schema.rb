@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713200238) do
+ActiveRecord::Schema.define(version: 20160714184906) do
 
   create_table "chore_items", force: :cascade do |t|
     t.string   "content"
-    t.integer  "chore_list_id"
+    t.integer  "kid_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "completed_at"
   end
 
-  add_index "chore_items", ["chore_list_id"], name: "index_chore_items_on_chore_list_id"
+  add_index "chore_items", ["kid_id"], name: "index_chore_items_on_kid_id"
 
   create_table "chore_lists", force: :cascade do |t|
     t.string   "title"

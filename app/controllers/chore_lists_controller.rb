@@ -25,8 +25,6 @@ class ChoreListsController < ApplicationController
   # POST /chore_lists.json
   def create
     @chore_list = ChoreList.new(chore_list_params)
-
-      @chore_list.kid = Kid.find(2)
       
     respond_to do |format|
       if @chore_list.save

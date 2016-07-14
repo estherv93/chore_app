@@ -1,15 +1,15 @@
 class ChoreItemsController < ApplicationController
-    before_action :set_chore_list
+    before_action :set_kid
     
     def create
-        @chore_item = @chore_list.chore_items.create(chore_item_params)
-        redirect_to @chore_list
+        @chore_item = @kid.chore_items.create(chore_item_params)
+        redirect_to @kid
     end
     
     private
     
-    def set_chore_list
-        @chore_list = ChoreList.find(params[:chore_list_id])
+    def set_kid
+        @kid = Kid.find(params[:kid_id])
     end
     
     def chore_item_params
